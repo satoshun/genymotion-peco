@@ -1,5 +1,7 @@
-genymotion_peco(){
+#!/bin/sh
 
+genymotion_peco()
+{
   if [ -z "$GENYMOTION_APP_HOME" ]; then
     echo "GENYMOTION_APP_HOME is empty. Use '/Applications/Genymotion.app/' instead this time."
     player="/Applications/Genymotion.app/Contents/MacOS/player"
@@ -13,6 +15,4 @@ genymotion_peco(){
      echo "boot $name"
      $player --vm-name "$name" &
   fi
-
 }
-
